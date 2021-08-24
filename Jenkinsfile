@@ -1,10 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('NPM Install') {
+    stage('SCM') {
       steps {
         echo 'Checkout master branch'
         checkout scm
+      }
+    }
+    stage('NPM Install') {
+      steps {
         bat 'npm install'
       }
     }
