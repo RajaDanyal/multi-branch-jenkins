@@ -18,12 +18,6 @@ pipeline {
         bat 'npm run build'
       }
     }
-    stage('Deploy') {
-      steps {
-        echo 'Deploying....'
-        bat 'npm start'
-      }
-    }
   }
   post {
     success {
